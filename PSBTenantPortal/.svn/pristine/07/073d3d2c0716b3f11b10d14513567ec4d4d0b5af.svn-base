@@ -1,0 +1,24 @@
+package com.psbparks.tenantinformationportal.dao;
+
+import java.util.Map;
+
+import com.psbparks.tenantinformationportal.entity.Company;
+import com.psbparks.tenantinformationportal.mockdata.TenantMockData;
+
+public class TenantInformationPortalDao {
+
+	TenantMockData tenantMockdata = new TenantMockData();
+
+	public void createTenantInfo(Company company) {
+
+		tenantMockdata.saveTenantInfo(company);
+
+	}
+
+	public Map<String, Company> getTenantInformation() {
+
+		Map<String, Company> tenantInfo = tenantMockdata.getTenantInfo();
+		return tenantInfo;
+	}
+
+}

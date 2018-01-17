@@ -1,0 +1,48 @@
+package com.psbparks.tenantinformationportal.service;
+
+import java.util.Map;
+
+import com.psbparks.tenantinformationportal.dao.TenantInformationPortalDao;
+import com.psbparks.tenantinformationportal.entity.Company;
+
+public class TenantInformationPortalService {
+
+	TenantInformationPortalDao tenantInformation = new TenantInformationPortalDao();
+
+	public void createTenantInformation(Company company) {
+
+		tenantInformation.createTenantInfo(company);
+
+	}
+
+	public void displayTenantInfo(String addressLineOne) {
+
+		Map<String, Company> tenantInfo = tenantInformation.getTenantInformation();
+
+		for (Map.Entry<String, Company> entry : tenantInfo.entrySet()) {
+
+			Company company = entry.getValue();
+			if (addressLineOne.equals(company.getAddress().getAddressLine1())) {
+				System.out.println("Tenant Name: " + company.getCompanyName());
+				System.out.println("Address:");
+				System.out.println("\t\t" + company.getAddress().getAddressLine1());
+				System.out.println("\t\t" + company.getAddress().getAddressLine2());
+				System.out.println("\t\t" + company.getAddress().getCity());
+				System.out.println("\t\t" + company.getAddress().getState() + " " + company.getAddress().getZip());
+				System.out.println("Contact Info:");
+				System.out.println("Primary Contact:");
+				System.out.println("\t\t" + "Name: " + company.getContact().get(0).getName());
+				System.out.println("\t\t" + "Phone Number: " + company.getContact().get(0).getPhoneNumber());
+				System.out.println("\t\t" + "EmailId: " + company.getContact().get(0).getEmailId());
+				System.out.println("Secondary Contact:");
+				System.out.println("\t\t" + "Name: " + company.getContact().get(1).getName());
+				System.out.println("\t\t" + "Phone Number: " + company.getContact().get(1).getPhoneNumber());
+				System.out.println("\t\t" + "EmailId: " + company.getContact().get(1).getEmailId());
+				System.out.println();
+				System.out.println("________________________________________________________________");
+			}
+		}
+
+	}
+
+}

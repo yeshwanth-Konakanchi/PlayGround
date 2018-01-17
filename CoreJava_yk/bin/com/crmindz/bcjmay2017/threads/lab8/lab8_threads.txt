@@ -1,0 +1,14 @@
+What do you need to do to define and start a thread? 
+ 
+Select 1 correct option. 
+a  Extend from class Thread, override method run() and call method start();   
+        
+b  Extend from class Runnable, override method run() and call method start();   
+               
+c  Extend from class Thread, override method start() and call method run();   
+               
+d  Implement interface Runnable and call start()   
+        
+e  Extend from class Thread, override method start() and call method start();   
+       
+The option is a.

@@ -1,0 +1,14 @@
+package com.crmindz.bcjmay2017.exceptions.lab1;
+/**
+ * @author Yeshwanth Konakanchi
+ * This class will take input as arguments from command prompt
+ * and displays the details.
+ */
+public class HelloWorld {
+	public static void main(String args[]) {
+		String firstName = args[0];
+		String lastName = args[1];
+		int age = Integer.parseInt(args[2]);
+		System.out.println("First Name: " + firstName + " \nLast Name: " + lastName + " \nAge: " + age);
+	}
+}

@@ -1,0 +1,15 @@
+Which of these statements are true? 
+ 
+Select 2 correct options 
+a  Calling the method sleep( ) does not kill a thread.   
+
+b  A thread dies when the start( ) method ends.   
+   
+c  A thread dies when the thread's constructor ends.   
+    
+d  A thread dies when the run( ) method ends.   
+       
+e  Calling the method kill( ) stops and kills a thread. 
+
+
+The options are a and d.

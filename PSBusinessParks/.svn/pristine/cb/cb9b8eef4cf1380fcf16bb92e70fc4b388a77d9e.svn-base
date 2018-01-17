@@ -1,0 +1,24 @@
+package com.psbparks.tenantinformationportal.mockdata;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.psbparks.tenantinformationportal.entity.Company;
+
+public class TenantMockData {
+
+	public Map<String, Company> tenantInfo = new HashMap<String, Company>();
+
+	public void saveTenantInfo(Company company) {
+
+		String name = company.getCompanyName();
+		tenantInfo.put(name, company);
+
+	}
+
+	public Map<String, Company> getTenantInfo() {
+
+		return tenantInfo;
+	}
+
+}
